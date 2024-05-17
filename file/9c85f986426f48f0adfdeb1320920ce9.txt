@@ -1,0 +1,1 @@
+ssh -i "C:\Users\86191\.ssh\ec2key.pem" ubuntu@

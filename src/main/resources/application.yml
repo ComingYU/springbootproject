@@ -7,6 +7,9 @@ spring:
     url: jdbc:mysql://localhost:3306/project?serverTimezone=GMT%2b8
     username: root
     password: 231006
+  servlet:
+    multipart:
+      max-file-size: 100MB
 #configuration:
 #  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 mybatis-plus:
@@ -19,3 +22,6 @@ springdoc:
   swagger-ui:
     # 持久化认证数据，如果设置为 true，它会保留授权数据并且不会在浏览器关闭/刷新时丢失
     persistAuthorization: true
+files:
+  upload:
+    path: /home/ubuntu/files

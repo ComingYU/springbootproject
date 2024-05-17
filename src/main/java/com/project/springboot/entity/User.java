@@ -1,10 +1,13 @@
 package com.project.springboot.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
@@ -33,6 +36,7 @@ public class User implements Serializable {
     @ApiModelProperty("用户名")
     private String username;
 
+    @JsonIgnore
     @ApiModelProperty("密码")
     private String password;
 
@@ -51,5 +55,6 @@ public class User implements Serializable {
     @ApiModelProperty("创建时间")
     private LocalDateTime createTime;
 
-
+    @ApiModelProperty("头像地址")
+    private String avatarUrl;
 }
